@@ -2,25 +2,33 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: node-health
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: node-health
 rules:
-  - apiGroups:
-      - extensions
-    resources:
-      - podsecuritypolicies
-    verbs:
-      - use
-    resourceNames:
-      - node-health
+- apiGroups:
+  - ""
+  resources:
+  - endpoints
+  resourceNames:
+  - node-health
+  verbs:
+  - get
 ---
-apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: node-health
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: node-health
 subjects:
-  - kind: ServiceAccount
-    name: node-health
-    namespace: {{ .Values.namespace }}
+- kind: ServiceAccount
+  name: node-health
+  namespace: {{ .Values.namespace }}
 roleRef:
   kind: Role
   name: node-health
+  labels:
+    app: node-health
   apiGroup: rbac.authorization.k8s.io

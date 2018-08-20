@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: node-health-configmap
   namespace: {{ .Values.namespace }}
+  labels:
+    app: node-health
 data:
   config.yaml: |
     server:
