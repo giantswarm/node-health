@@ -47,5 +47,3 @@ spec:
           items:
           - key: config.yaml
             path: config.yaml
-      imagePullSecrets:
-      - name: node-health-pull-secret
