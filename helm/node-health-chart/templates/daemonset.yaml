@@ -18,7 +18,7 @@ spec:
     spec:
       serviceAccountName: node-health
       containers:
-      - image: quay.io/giantswarm/node-health:[[ .SHA ]]
+      - image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: node-health
         args:
         - daemon
