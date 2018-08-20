@@ -9,7 +9,7 @@ rules:
 - apiGroups:
   - ""
   resources:
-  - endpoints
+  - nodes
   resourceNames:
   - node-health
   verbs:
