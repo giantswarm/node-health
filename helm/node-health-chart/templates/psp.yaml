@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: node-health-psp
+  name: node-health
 spec:
   privileged: false
   fsGroup:
