@@ -93,10 +93,11 @@ func init() {
 			Logger:        l,
 
 			ChartConfig: managedservices.ChartConfig{
-				ChannelName: fmt.Sprintf("%s-%s", env.CircleSHA(), testName),
-				ChartName:   chartName,
-				ChartValues: "",
-				Namespace:   metav1.NamespaceSystem,
+				ChannelName:     fmt.Sprintf("%s-%s", env.CircleSHA(), testName),
+				ChartName:       chartName,
+				ChartValues:     "",
+				Namespace:       metav1.NamespaceSystem,
+				RunReleaseTests: false,
 			},
 			ChartResources: managedservices.ChartResources{
 				DaemonSets: []managedservices.DaemonSet{
