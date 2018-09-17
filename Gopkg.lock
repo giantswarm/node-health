@@ -157,7 +157,6 @@
   packages = [
     "pkg/framework",
     "pkg/framework/filelogger",
-    "pkg/framework/resource",
     "pkg/harness"
   ]
   revision = "b8f538cd46acde7bd3570348948080de2b07b8ae"
@@ -169,13 +168,7 @@
     "chart",
     "chart/env"
   ]
-  revision = "d69cd345fbb3e1b1c7f092cf009d0c92806ce2bb"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/giantswarm/e2etests"
-  packages = ["managedservices"]
-  revision = "bc2f34dab1e20f4be9cfdf04bb1881d47f0daffe"
+  revision = "649469c2d54fba4bf86b3e9bca96bd47435461ae"
 
 [[projects]]
   branch = "master"
@@ -187,7 +180,7 @@
   branch = "master"
   name = "github.com/giantswarm/helmclient"
   packages = ["."]
-  revision = "e34390752975ad2db4b52bad7487440223184073"
+  revision = "1bc4dcdb7e3c4b3d8900dd31c3dac2aa64d318c4"
 
 [[projects]]
   branch = "master"
@@ -658,7 +651,7 @@
   branch = "master"
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
-  revision = "36d5787dc5356b711fe8f3040271aaf51c35955b"
+  revision = "5a2fd4cab2d6d4a18e70c34937662526cd0c4bd1"
 
 [[projects]]
   name = "google.golang.org/grpc"
@@ -1174,6 +1167,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "179f75bafb1778531eca762b6fc93a94ca4341a32a39ce9d025e44910613b05f"
+  inputs-digest = "9cd1e460d4d5cbf2b2393afedc990cfafac65a07aa5cd567882e29695b871756"
   solver-name = "gps-cdcl"
   solver-version = 1
