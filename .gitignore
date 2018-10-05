@@ -1,3 +1,9 @@
 kubernetes-node-health
 TODO
+
+# don't apply earlier restrictions under vendor
 !vendor/**
+
+.e2e-harness/
+
+integration/test/**/*-e2e
